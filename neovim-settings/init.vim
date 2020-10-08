@@ -5,7 +5,7 @@ filetype off
 syntax enable
 syntax on
 
-set path+=**
+" let path+=**
 set wildmenu
 
 set noerrorbells
@@ -28,17 +28,8 @@ set splitbelow splitright
 " ********** Plugins **********
 
 call plug#begin()
-  " Plug 'roxma/nvim-completion-manager'
-  " Plug 'SirVer/ultisnips'
-  " Plug 'honza/vim-snippets'
   Plug 'itchyny/lightline.vim'
   Plug 'lervag/vimtex'
-  "Plug 'morhetz/gruvbox'
-  "Plug 'tomasr/molokai'
-  "Plug 'dracula/vim', { 'name': 'dracula' }
-  "Plug 'https://github.com/altercation/vim-colors-solarized.git',
-  "Plug 'arcticicestudio/nord-vim', { 'name': 'nord'}
-  "Plug 'jnurmine/Zenburn',
   Plug 'https://github.com/cocopon/iceberg.vim.git'
 call plug#end()
 
@@ -48,3 +39,10 @@ set laststatus=2
 set background=dark
 
 colorscheme iceberg
+
+let g:mapleader = "\<Space>"
+
+let g:tex_flavor = 'latex'
+
+let g:latex_view_general_viewer = 'zathura'
+let g:vimtex_view_method = 'zathura'
