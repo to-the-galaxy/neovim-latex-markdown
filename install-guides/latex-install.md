@@ -39,8 +39,14 @@ process that is fully done using the graphical user interface.
 1. On Manjaro Linux, the MikTex distribution of Latex, must be installed using
    the GUI package manager, pamac-manager, from the AUR repository. For Debian
    based systems see instructions on [miktex.org](https://miktex.org/).
-2. Open `MikTex Console` (and follow the instructions):
-    a. Chose 
+2. Open `MikTex Console` (and follow the instructions).
+3. Choose "Finish private setup".
+4. Restart the MikTex Console.
+5. MikTex prompts with a warning, that you have not checked for updates. Click ok.
+6. Click "Upgrade now" before checking for updates, otherwise the option disappears.
+7. Check for updates.
+8. Add `/home/<user>/bin` to the `PATH`-environment variable, by adding this to the `.bashrc`: `export PATH="$PATH:/home/<user>/bin"`.
+9. Check the version of latex to confirm it has been installed: `$ latex --version`.
 
 ### Install the additional applications and plugins
 
