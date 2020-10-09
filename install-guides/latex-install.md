@@ -39,7 +39,8 @@ process that is fully done using the graphical user interface.
 1. On Manjaro Linux, the MikTex distribution of Latex, must be installed using
    the GUI package manager, pamac-manager, from the AUR repository. For Debian
    based systems see instructions on [miktex.org](https://miktex.org/).
-2. Open `MikTex Console` # ...
+2. Open `MikTex Console` (and follow the instructions):
+    a. Chose 
 
 ### Install the additional applications and plugins
 
@@ -74,7 +75,7 @@ call plug#end()
 
 Then run `:PlugInstall` from the command line in Neovim.
 
-### Configure `vimtex` and a few commands
+### Configure `vimtex` 
 
 `vimtex` needs to be configured. Add the following to `init.vim`:
 
@@ -83,6 +84,8 @@ let g:tex_flavor = 'latex'
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
 ```
+
+## Usage with Latex and Xelatex documents
 
 A few useful `vimtex`-commands for which you may want to add your own
 keybindings:
@@ -98,17 +101,14 @@ keybindings:
 - `:VimtexTocOpen` open the table of contents.
 - `:VimtexTocToggle` toggle table of contents.
 
+The above works well out of the box with latex documents.
 
+For Xelatex documents to compile correctly, it is necessary to add the following to the first to lines of the tex-file:
 
+```
+ %!TEX TS-program = xelatex
+ %!TEX encoding = UTF-8 Unicode
+```
 
-
-
-
-
-
-
-
-
-
-
-
+You may use the [sample-documents](../sample-documents) for testing. They are minimal examples
+designed to test the basics. If they work try more complicated documents.
