@@ -31,6 +31,8 @@ call plug#begin()
   Plug 'itchyny/lightline.vim'
   Plug 'lervag/vimtex'
   Plug 'https://github.com/cocopon/iceberg.vim.git'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " ********** Plugins **********
@@ -46,3 +48,7 @@ let g:tex_flavor = 'latex'
 
 let g:latex_view_general_viewer = 'zathura'
 let g:vimtex_view_method = 'zathura'
+
+let g:mkdp_auto_close=0
+let g:mkdp_refresh_slow=1
+let g:mkdp_markdown_css='/home/michael/node_modules/github-markdown-css/'
